@@ -1,0 +1,58 @@
+
+
+.cusCur{
+    width: 10px;
+    height:20px;
+    border: 1px solid #000;
+    background-color: rgb(202, 202, 202);
+    border-radius: 0%;
+    position: absolute;
+    cursor: auto;
+    transition-duration: 200ms;
+    transition-timing-function: ease-out;
+    pointer-events: none;
+    left: -50px;
+    z-index: 100000;
+}
+
+.cusCur::after{
+    content: "";
+    width: 15px;
+    height:6px;
+    position: absolute;
+    border: 1px solid #111;
+    background-color: brown;
+    border-radius: 0%;
+    left: 10px;
+    top: 6px;
+    z-index: 100000;
+}
+
+.clickAnimation {
+    animation: throw .5s forwards;
+    border: 1px solid #fff;
+    box-shadow: 1px 1px 10px 2px rgb(22, 139, 212);
+}
+
+@keyframes throw {
+    0% {
+        transform: translateX(0px);
+        box-shadow: 0px 0px 10px 2px rgb(22, 139, 212);
+    }
+    30% {
+        transform: translateX(-2000px);
+        box-shadow: 0px 0px 10px 2px rgb(22, 139, 212);
+    }
+    40% {
+        transform: translateY(3000px);
+        box-shadow: 1px 1px 10px 2px rgb(22, 139, 212);
+    }
+    50% {
+        transform: translateX(2000px);
+        box-shadow: 1px 1px 10px 2px rgb(22, 139, 212);
+    }
+    100% {
+        transform: translateX(0px);
+        box-shadow: 1px 1px 10px 2px rgb(22, 139, 212);
+    }
+}
